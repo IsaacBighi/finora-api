@@ -12,7 +12,12 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'html'],
       include: ['src/**/*.ts'],
-      exclude: ['src/index.ts', 'src/**/*.d.ts'],
+      exclude: [
+        'src/index.ts',
+        'src/**/*.d.ts',
+        'src/**/**/domain/repository/**',
+        'src/**/**/application/ports/**',
+      ],
     },
   },
 });
